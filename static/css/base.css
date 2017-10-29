@@ -1,0 +1,182 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 321px) {
+  body {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 321px) and (max-width: 400px) {
+  body {
+    font-size: 17px;
+  }
+}
+
+@media screen and (min-width: 400px) {
+  body {
+    font-size: 18px;
+  }
+}
+
+body {
+  min-height: 100vh;
+  position: relative;
+  font: 16px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: #f4f4f4;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); /* Remove highlight on tap event*/
+  -moz-tap-highlight-color: rgba(0, 0, 0, 0);
+  -ms-tap-highlight-color: rgba(0, 0, 0, 0);
+  tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-overflow-scrolling: touch;
+  overflow-scrolling: touch;
+  overflow-x: hidden;
+}
+
+pre {
+  white-space: pre-wrap;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+img,
+input,
+textarea,
+button {
+    outline: none;
+    border: none;
+}
+
+fieldset, img {
+  border: 0;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+caption, th {
+  text-align: left;
+}
+
+a {
+    color: inherit;
+  text-decoration: none;
+}
+// a:active {
+//   color: #fff;
+// }
+// a.link:active {
+//   color: #999;
+// }
+
+.bd_t:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  border-top: 1px solid #dfdfdf;
+  -webkit-transform: scaleY(.5);
+  -webkit-transform-origin: 0 0;
+}
+
+.bd_b:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-bottom: 1px solid #dfdfdf;
+  -webkit-transform: scaleY(.5);
+  -webkit-transform-origin: 0 0;
+}
+
+.bd_r:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  right: 0;
+  display: block;
+  height: 200%;
+  border-right: 1px solid #dfdfdf;
+  -webkit-transform: scaleY(.5);
+  -webkit-transform-origin: 0 0;
+}
+
+.bd_l:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  display: block;
+  height: 200%;
+  border-left: 1px solid #dfdfdf;
+  -webkit-transform: scaleY(.5);
+  -webkit-transform-origin: 0 0;
+}
+
+.bodyUnScroll {
+  overflow: hidden;
+}
+/**
+ * [text_nowrap_ellipsis 文字超出后添加省略号]
+ * @Author   郑君婵
+ * @DateTime 2017-06-30
+ */
+
+.text_nowrap_ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/**
+ * [clear_float 清除浮动]
+ * @Author   郑君婵
+ * @DateTime 2017-06-30
+ */
+
+.clear_float {
+    zoom: 1;
+}
+
+.clear_float:after {
+    display: block;
+    clear: both;
+    content: "";
+    visibility: hidden;
+    height: 0
+}
+
+
+/**
+ * [clear_float 向左浮动]
+ * @Author   郑君婵
+ * @DateTime 2017-07-1
+ */
+
+.fl {
+    float: left;
+}
+
+
+/**
+ * [clear_float 向右浮动]
+ * @Author   郑君婵
+ * @DateTime 2017-07-1
+ */
+
+.fr {
+    float: right;
+}

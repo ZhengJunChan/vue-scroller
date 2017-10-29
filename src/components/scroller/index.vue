@@ -87,10 +87,8 @@
                 this.startScroll = this.$el.scrollTop || 0;
                 this.touching = true;  // 留着有用，不能删除
 
-                // this.config.disablePullup = false;
                 if (!this.config.disablePullup) {
-                    console.log('touchStart');
-                    this.$el.querySelector('.load_more').style.display = 'block';
+                    this.$refs.loadMore.style.display = 'block';
                 }
             },
             touchMove(e) {
@@ -116,8 +114,7 @@
                     this.state = 0;
                 }
 
-                let more = this.$el.querySelector('.load_more');
-                console.log('touchMove');
+                let more = this.$refs.loadMore;
 
                 if (!this.top && this.state === 0) {
                     more.style.display = 'block';
@@ -175,8 +172,7 @@
                     this.downFlag = true;
                     this.infinite();
                 } else {
-                    console.log('touchEnd');
-                    this.$el.querySelector('.load_more').style.display = 'none';
+                    this.$refs.loadMore.style.display = 'none';
                     this.downFlag = false;
                 }
             },
